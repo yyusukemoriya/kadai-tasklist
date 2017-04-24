@@ -9,7 +9,7 @@ class TasksController < ApplicationController
   end
 
   def new
-    @task = Task.new
+    @tasks = Task.all.page(params[:page])
   end
 
   def create
